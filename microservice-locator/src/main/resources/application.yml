@@ -1,0 +1,29 @@
+info:
+  component: locator app
+
+server:
+  port: 8890
+  
+spring:
+   config:
+      name: locator
+   application:
+      name: locator
+#   rabbitmq:
+#      host: mybroker.com
+#      port: 5672
+#      username: user
+#      password: secret
+
+#management:
+#  context-path: /admin
+  
+logging:
+  level:
+#    com.netflix.discovery: 'OFF'
+    org.springframework.cloud: 'DEBUG'
+
+## no JCE in PWS
+#security:
+#  user:
+#    password: password
