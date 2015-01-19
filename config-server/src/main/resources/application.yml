@@ -1,0 +1,31 @@
+server:
+  port: 8888
+
+logging:
+  level:
+    com.netflix.discovery: 'OFF'
+    org.springframework.cloud: 'DEBUG'
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+         uri: https://github.com/pretonik/config-repo
+         basedir: target/config
+security:
+   user:
+      password: '{cipher}d61b84775382eacebb954052fe717766bc063fd923aea9d416c979e5cf80df86'
+      
+      
+---
+spring:
+  profiles: cloud
+eureka:
+  instance:
+    hostname: ${PREFIX:}${spring.application.name}.${application.domain:cfapps.io}
+    nonSecurePort: 80
+# no JCE in PWS
+security:
+  user:
+    password: password
