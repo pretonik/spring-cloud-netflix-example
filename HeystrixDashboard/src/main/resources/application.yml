@@ -1,0 +1,16 @@
+server:
+  port: 9000
+spring:
+  application:
+    name:hystrixdashboard
+  config:
+    name:hystrixdashboard
+#security:
+#  user:
+#    password: password
+security:
+  ignored:true
+turbine:
+  aggregator:
+    clusterConfig: MICROSERVICESCLIENT
+  appConfig: microservicesclient
