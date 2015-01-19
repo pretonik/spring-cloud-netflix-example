@@ -1,0 +1,17 @@
+info:
+  component: string app
+  
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+    
+server:
+  port: 9200
+  
+spring:
+   config:
+      name:  microservicestring
+   application:
+      name:  microservicestring
