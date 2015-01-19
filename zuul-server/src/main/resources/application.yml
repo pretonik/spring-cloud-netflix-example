@@ -1,0 +1,22 @@
+info:
+  component: zuul server app
+    
+server:
+  port: 8080
+  
+spring:
+   config:
+      name:  zuulserver
+   application:
+      name:  zuulserver
+zuul:
+  routes:
+    strings:
+      path: /microservicestring/**
+      serviceId: microservicestring
+    locations:
+      path: /locate/**
+      serviceId: locator
+error:
+  whitelabel:
+    enabled:false
